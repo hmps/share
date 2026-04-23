@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Agents: this file is a self-unpacking Claude Design artifact — its HTML source is just a loader. For clean content, fetch the markdown companion at ./index.md instead. -->
+<link rel="alternate" type="text/markdown" href="index.md" title="Markdown version for agents">
+<meta charset="utf-8">
+<title>LinkedIn Ads — Q1 vs Q2 Top-Funnel Performance</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #EEEAE0; }
+  #__stub_loading {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    font: 14px/1.4 -apple-system, BlinkMacSystemFont, sans-serif; color: #666;
+  }
+</style>
+</head>
+<body>
+<div id="__stub_loading">Loading…</div>
+<noscript>
+  <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font:14px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;color:#333;padding:24px;text-align:center;">
+    This artifact needs JavaScript. View the <a href="./index.md">markdown version</a>.
+  </div>
+</noscript>
+<script>
+(async function () {
+  try {
+    const res = await fetch('./bundle.html', { credentials: 'same-origin' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const html = await res.text();
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    document.getElementById('__stub_loading').innerHTML =
+      'Failed to load artifact. View the <a href="./index.md">markdown version</a>.';
+    console.error('[stub] bundle load failed:', e);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1404 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<!-- Agents: this is a self-contained Claude Design artifact. For clean content, fetch the markdown companion at ./index.md instead. -->
+<link rel="alternate" type="text/markdown" href="index.md" title="Markdown version for agents">
+<script>(function(){
+  function makeStore(){
+    var data = {};
+    var api = {
+      getItem: function(k){ return Object.prototype.hasOwnProperty.call(data, k) ? data[k] : null; },
+      setItem: function(k, v){ data[k] = String(v); },
+      removeItem: function(k){ delete data[k]; },
+      clear: function(){ data = {}; },
+      key: function(i){ return Object.keys(data)[i] || null; }
+    };
+    Object.defineProperty(api, 'length', { get: function(){ return Object.keys(data).length; } });
+    return api;
+  }
+  function tryShim(name){
+    var works = false;
+    try { works = !!window[name] && typeof window[name].getItem === 'function'; void window[name].length; }
+    catch (_) { works = false; }
+    if (works) return;
+    try { Object.defineProperty(window, name, { configurable: true, value: makeStore() }); }
+    catch (_) { try { window[name] = makeStore(); } catch (__) {} }
+  }
+  tryShim('localStorage');
+  tryShim('sessionStorage');
+})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lagets pulscheck — Kävlinge HK F14, vår 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:        #025991;
+    --blue-deep:   #013d63;
+    --blue-soft:   #e7eff5;
+    --orange:      #F39000;
+    --orange-soft: #fdecd1;
+    --paper:       #f6f3ee;
+    --paper-2:     #ffffff;
+    --ink:         #0e1a23;
+    --ink-soft:    #4a5663;
+    --rule:        #d9d3c8;
+    --rule-strong: #1a2630;
+
+    --font-display: 'Anton', 'Bebas Neue', 'Arial Narrow', sans-serif;
+    --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --font-mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  h1, h2, h3 { margin: 0; font-weight: 400; }
+  p { margin: 0 0 1em; text-wrap: pretty; }
+  .num, .tab { font-variant-numeric: tabular-nums; }
+  .mono { font-family: var(--font-mono); }
+
+  /* ========== Layout ========== */
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  @media (max-width: 720px) {
+    .wrap { padding: 0 20px; }
+  }
+
+  /* ========== Top bar ========== */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-2);
+  }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .crest {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--blue);
+    font-weight: 700;
+  }
+  .crest-mark {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--blue);
+    position: relative;
+  }
+  .crest-mark::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+  .topbar-meta { font-family: var(--font-mono); font-size: 11px; }
+
+  /* ========== Hero ========== */
+  .hero {
+    padding: 90px 0 70px;
+    border-bottom: 2px solid var(--rule-strong);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    right: -120px;
+    top: -40px;
+    width: 520px; height: 520px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: 60px;
+    top: 80px;
+    width: 320px; height: 320px;
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--blue);
+    margin-bottom: 36px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 28px; height: 2px;
+    background: var(--orange);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 10vw, 156px);
+    line-height: 0.92;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    text-transform: uppercase;
+    max-width: 14ch;
+    position: relative;
+  }
+  .hero h1 .accent { color: var(--blue); }
+  .hero h1 .swoosh { color: var(--orange); }
+  .hero-deck {
+    margin-top: 36px;
+    max-width: 56ch;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  .hero-meta {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+  }
+  @media (max-width: 720px) { .hero-meta { grid-template-columns: repeat(2, 1fr); gap: 22px; } }
+  .hero-meta div + div { border-left: 1px solid var(--rule); padding-left: 20px; }
+  @media (max-width: 720px) { .hero-meta div + div { border-left: 0; padding-left: 0; } }
+  .hero-meta dt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .hero-meta dd {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+
+  /* ========== Section frame ========== */
+  section.report {
+    padding: 110px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  section.report.alt { background: var(--paper-2); }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+    align-items: start;
+  }
+  @media (max-width: 720px) { .section-head { grid-template-columns: 1fr; gap: 14px; } }
+  .section-num {
+    font-family: var(--font-display);
+    font-size: 96px;
+    line-height: 0.85;
+    color: var(--blue);
+    letter-spacing: 0.01em;
+  }
+  .section-title h2 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 4.5vw, 64px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    max-width: 18ch;
+  }
+  .section-title .kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  /* ========== TLDR card ========== */
+  .tldr {
+    border: 2px solid var(--rule-strong);
+    background: var(--paper-2);
+    padding: 48px 48px 40px;
+    position: relative;
+  }
+  @media (max-width: 720px) { .tldr { padding: 32px 24px; } }
+  .tldr::before {
+    content: 'TLDR';
+    position: absolute;
+    top: -14px;
+    left: 36px;
+    background: var(--orange);
+    color: #1a0f00;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    padding: 6px 14px;
+  }
+  .tldr-headline {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 3.6vw, 48px);
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 28px;
+    max-width: 24ch;
+  }
+  .tldr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+  }
+  @media (max-width: 900px) { .tldr-grid { grid-template-columns: repeat(2, 1fr); } }
+  .tldr-stat {
+    padding: 8px 22px;
+    border-right: 1px solid var(--rule);
+  }
+  .tldr-stat:last-child { border-right: 0; }
+  @media (max-width: 900px) {
+    .tldr-stat { padding: 18px 14px; border-right: 0; border-bottom: 1px solid var(--rule); }
+    .tldr-stat:last-child { border-bottom: 0; }
+  }
+  .tldr-stat .big {
+    font-family: var(--font-display);
+    font-size: 64px;
+    line-height: 0.9;
+    color: var(--ink);
+    letter-spacing: 0.005em;
+  }
+  .tldr-stat .big.warn { color: var(--orange); }
+  .tldr-stat .label {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.35;
+    color: var(--ink-soft);
+  }
+  .tldr-list {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 36px;
+  }
+  @media (max-width: 720px) { .tldr-list { grid-template-columns: 1fr; } }
+  .tldr-list .pt {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .tldr-list .marker {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--blue);
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+  .tldr-list .pt.warn .marker { color: var(--orange); }
+  .tldr-list .pt p { margin: 0; font-size: 15.5px; }
+
+  /* ========== Question card ========== */
+  .qcard {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+  }
+  @media (max-width: 900px) { .qcard { grid-template-columns: 1fr; gap: 36px; } }
+
+  .stat-block .verdict {
+    font-family: var(--font-display);
+    font-size: clamp(80px, 12vw, 156px);
+    line-height: 0.85;
+    color: var(--blue);
+    letter-spacing: 0.005em;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .stat-block .verdict.warn { color: var(--orange); }
+  .stat-block .verdict .unit {
+    font-size: 0.32em;
+    color: var(--ink-soft);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .stat-block .verdict-label {
+    margin-top: 12px;
+    font-size: 18px;
+    color: var(--ink);
+    max-width: 26ch;
+    line-height: 1.4;
+  }
+
+  /* Distribution bars */
+  .bars {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px;
+  }
+  .bar-label {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bar-track {
+    grid-column: 1 / -1;
+    height: 14px;
+    background: var(--blue-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    background: var(--blue);
+    width: var(--w, 0%);
+    transition: width .8s ease;
+  }
+  .bar.warn .bar-fill { background: var(--orange); }
+  .bar.warn .bar-track { background: var(--orange-soft); }
+  .bar-meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-weight: 700;
+  }
+  .bar-meta .n { color: var(--ink); }
+
+  .deviation-callout {
+    margin-top: 28px;
+    border-left: 4px solid var(--orange);
+    background: var(--orange-soft);
+    padding: 18px 22px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .deviation-callout .badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6b3d00;
+    background: var(--orange);
+    padding: 4px 8px;
+    border-radius: 0;
+  }
+  .deviation-callout p {
+    margin: 0;
+    font-size: 15px;
+    color: #4a2e00;
+    line-height: 1.45;
+  }
+
+  /* Right-side aside */
+  .aside-block {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-self: stretch;
+  }
+  .quote {
+    border-top: 2px solid var(--rule-strong);
+    padding-top: 24px;
+    position: relative;
+  }
+  .quote::before {
+    content: '“';
+    position: absolute;
+    top: -8px;
+    left: -2px;
+    font-family: var(--font-display);
+    font-size: 64px;
+    line-height: 1;
+    color: var(--orange);
+  }
+  .quote-text {
+    padding-left: 38px;
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.18;
+    color: var(--ink);
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  .quote-text.serif {
+    font-family: 'Iowan Old Style', 'Charter', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .quote-attr {
+    margin-top: 16px;
+    padding-left: 38px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .quote-attr::before {
+    content: '— ';
+    color: var(--orange);
+  }
+
+  .factbox {
+    background: var(--blue);
+    color: #fff;
+    padding: 24px 26px;
+    position: relative;
+  }
+  .factbox .lbl {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+  }
+  .factbox .stat {
+    font-family: var(--font-display);
+    font-size: 56px;
+    line-height: 0.9;
+    margin-bottom: 8px;
+  }
+  .factbox .copy {
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+  }
+
+  /* Press matrix */
+  .press-matrix {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 28px;
+  }
+  .press-row {
+    display: grid;
+    grid-template-columns: 160px 1fr 60px;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .press-row:last-child { border-bottom: 0; }
+  @media (max-width: 720px) { .press-row { grid-template-columns: 110px 1fr 44px; gap: 10px; } }
+  .press-source {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .press-track {
+    height: 22px;
+    background: var(--blue-soft);
+    position: relative;
+  }
+  .press-fill {
+    position: absolute; inset: 0 auto 0 0;
+    background: var(--blue);
+    width: var(--w, 0%);
+  }
+  .press-row.zero .press-track { background: repeating-linear-gradient(45deg, var(--blue-soft), var(--blue-soft) 6px, transparent 6px, transparent 12px); border: 1px solid var(--rule); }
+  .press-row.zero .press-fill { display: none; }
+  .press-row.warn .press-fill { background: var(--orange); }
+  .press-count {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-align: right;
+    color: var(--ink);
+  }
+  .press-row.zero .press-count { color: var(--ink-soft); }
+
+  /* Strengths cloud */
+  .cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    padding: 8px 14px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+  }
+  .chip.lg { font-family: var(--font-display); font-size: 22px; letter-spacing: 0.01em; padding: 8px 16px; background: var(--blue); color: #fff; border-color: var(--blue); text-transform: uppercase; }
+  .chip.md { font-family: var(--font-display); font-size: 17px; padding: 8px 14px; background: transparent; color: var(--blue); border-color: var(--blue); text-transform: uppercase; }
+  .chip.warn { background: var(--orange-soft); border-color: var(--orange); color: #6b3d00; }
+
+  /* Misslyckanden split */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 24px;
+    border: 2px solid var(--rule-strong);
+  }
+  @media (max-width: 600px) { .split { grid-template-columns: 1fr; } }
+  .split-half {
+    padding: 28px 24px;
+    border-right: 2px solid var(--rule-strong);
+  }
+  .split-half:last-child { border-right: 0; }
+  @media (max-width: 600px) { .split-half:last-child { border-top: 2px solid var(--rule-strong); border-right: 0; } }
+  .split-pct {
+    font-family: var(--font-display);
+    font-size: 64px;
+    line-height: 0.9;
+    color: var(--blue);
+  }
+  .split-pct .small { font-size: 0.4em; color: var(--ink-soft); font-family: var(--font-mono); }
+  .split-text { margin-top: 10px; font-size: 15px; line-height: 1.4; color: var(--ink); }
+
+  /* Closing */
+  .closing {
+    background: var(--blue);
+    color: #fff;
+    padding: 110px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 360px; height: 360px;
+    border-radius: 50%;
+    background: var(--orange);
+    opacity: 0.18;
+  }
+  .closing::after {
+    content: '';
+    position: absolute;
+    left: -120px; bottom: -120px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    opacity: 0.5;
+  }
+  .closing h2 {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    text-transform: uppercase;
+    max-width: 18ch;
+    color: #fff;
+    position: relative;
+  }
+  .closing h2 em { color: var(--orange); font-style: normal; }
+  .closing-points {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    position: relative;
+  }
+  @media (max-width: 800px) { .closing-points { grid-template-columns: 1fr; } }
+  .closing-point {
+    border-top: 2px solid var(--orange);
+    padding-top: 18px;
+  }
+  .closing-point .n {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--orange);
+    margin-bottom: 10px;
+  }
+  .closing-point h3 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.005em;
+  }
+  .closing-point p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.84);
+  }
+
+  footer.site {
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+    padding: 32px 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  footer.site .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer.site .crest-mark { width: 16px; height: 16px; }
+
+  /* Goalie pull-quote (full-bleed) */
+  .pullquote {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-2);
+  }
+  .pullquote-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .pullquote .lbl {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pullquote .lbl::before {
+    content: '';
+    width: 28px; height: 2px; background: var(--orange);
+  }
+  .pullquote blockquote {
+    margin: 0;
+    font-family: 'Iowan Old Style', 'Charter', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(28px, 4.2vw, 56px);
+    line-height: 1.18;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .pullquote blockquote::before { content: '“'; color: var(--orange); margin-right: 4px; }
+  .pullquote blockquote::after  { content: '”'; color: var(--orange); margin-left: 4px; }
+  .pullquote .attr {
+    margin-top: 28px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .pullquote .attr::before { content: '— '; color: var(--orange); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="crest"><span class="crest-mark"></span><span>Kävlinge HK · F14</span></div>
+    <div class="topbar-meta">Spelaranalys · vår 2026 · v1.0</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Internt beslutsunderlag · Tränare &amp; ledning</div>
+    <h1>Lagets <span class="accent">pulscheck</span> <span class="swoosh">/</span> 2026</h1>
+    <p class="hero-deck">17 av 18 spelare har svarat på vårens enkät. Sammantaget är trivseln hög, alla vill spela vidare nästa säsong — men några tydliga signaler är värda att lyssna på.</p>
+    <dl class="hero-meta">
+      <div><dt>Svar</dt><dd>17 / 18</dd></div>
+      <div><dt>Frågor</dt><dd>11</dd></div>
+      <div><dt>Period</dt><dd>Apr–Maj</dd></div>
+      <div><dt>Avvikelser</dt><dd style="color:var(--orange)">5 zoner</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ============== TLDR ============== -->
+<section class="report">
+  <div class="wrap">
+    <div class="tldr">
+      <div class="tldr-headline">Stark grund — finslipa relationerna i marginalen</div>
+      <div class="tldr-grid">
+        <div class="tldr-stat">
+          <div class="big">100<span style="font-size:0.45em;color:var(--ink-soft)">%</span></div>
+          <div class="label">vill fortsätta spela handboll i F14 nästa säsong</div>
+        </div>
+        <div class="tldr-stat">
+          <div class="big">88<span style="font-size:0.45em;color:var(--ink-soft)">%</span></div>
+          <div class="label">trivs <em style="font-style:normal;font-weight:700">mycket bra</em> i laget</div>
+        </div>
+        <div class="tldr-stat">
+          <div class="big warn">5<span style="font-size:0.45em;color:var(--ink-soft)">/11</span></div>
+          <div class="label">frågor har en avvikande röst som behöver fångas upp</div>
+        </div>
+        <div class="tldr-stat">
+          <div class="big">0</div>
+          <div class="label">spelare upplever press från tränare eller föräldrar</div>
+        </div>
+      </div>
+
+      <div class="tldr-list">
+        <div class="pt"><span class="marker">01</span><p><strong>Kulturen håller.</strong> Trivsel, kompisskap och matchglädje ligger på toppnivå. 100% vill spela vidare.</p></div>
+        <div class="pt warn"><span class="marker">⚠</span><p><strong>En spelare har känt sig ensam.</strong> Bara en röst — men citatet är tydligt: <em>"Det känns ensamt."</em></p></div>
+        <div class="pt"><span class="marker">02</span><p><strong>Trycket sitter inifrån.</strong> 11 av 17 lägger pressen på sig själva. Inga signaler om vuxenpress.</p></div>
+        <div class="pt warn"><span class="marker">⚠</span><p><strong>Två spelare upplever inte rättvis behandling alltid.</strong> &quot;Ibland&quot; — värt en samtalsstund.</p></div>
+        <div class="pt"><span class="marker">03</span><p><strong>Misslyckanden hanteras moget.</strong> 100% återhämtar sig — antingen direkt eller efter en kort surrunda.</p></div>
+        <div class="pt warn"><span class="marker">⚠</span><p><strong>Två är inte nöjda med sin position.</strong> Tydlig önskan om rotation och nia-spel framträder i citaten.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q1 Trivsel ============== -->
+<section class="report alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 01 / Trivsel</div>
+        <h2>Hur trivs du i laget?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">88<span class="unit">%</span></div>
+        <div class="verdict-label">av spelarna trivs <strong>mycket bra</strong> i laget. Återstoden trivs ganska bra — inga negativa svar alls.</div>
+        <div class="bars">
+          <div class="bar">
+            <span class="bar-label">Mycket bra</span>
+            <span class="bar-meta"><span class="n">15</span> / 17 · 88%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="bar warn">
+            <span class="bar-label">Ganska bra</span>
+            <span class="bar-meta"><span class="n">2</span> / 17 · 12%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+          </div>
+        </div>
+        <div class="deviation-callout">
+          <span class="badge">Avvikelse</span>
+          <p>Två spelare svarar &quot;ganska bra&quot; istället för &quot;mycket bra&quot;. En av dem är samma person som senare anger att hon känt sig utanför och pressad av lagkamrater — värd en enskild check-in.</p>
+        </div>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Kompisar, utmaning, tränare och självaste sporten.</p>
+          <div class="quote-attr">Spelare på frågan om trivsel</div>
+        </div>
+        <div class="factbox">
+          <div class="lbl">Statistik</div>
+          <div class="stat">15/17</div>
+          <p class="copy">spelare beskriver trivseln som mycket bra. Citaten lyfter genomgående lagkamraterna, tränarna och själva sporten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q2 Kompisar ============== -->
+<section class="report">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 02 / Kompisar</div>
+        <h2>Har du kompisar i laget?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">88<span class="unit">%</span></div>
+        <div class="verdict-label">har <strong>många</strong> kompisar i laget. Två har &quot;några&quot;, varav en är ny i laget.</div>
+        <div class="bars">
+          <div class="bar">
+            <span class="bar-label">Ja, många</span>
+            <span class="bar-meta"><span class="n">15</span> / 17 · 88%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="bar">
+            <span class="bar-label">Ja, några</span>
+            <span class="bar-meta"><span class="n">2</span> / 17 · 12%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Jag har många kompisar i laget och har hittat min bästa kompis.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div class="factbox">
+          <div class="lbl">Notering</div>
+          <div class="stat">+1 ny</div>
+          <p class="copy">En av spelarna har precis börjat — kommenterar att hon &quot;inte har jättemånga än&quot;. Värd en aktiv inbjudningsinsats från ledande spelare under hösten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q3 Utanför ============== -->
+<section class="report alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 03 / Utanförskap</div>
+        <h2>Har du någon gång känt dig utanför?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">94<span class="unit">%</span></div>
+        <div class="verdict-label">svarar <strong>nej</strong>. En spelare svarar &quot;någon gång&quot; — den enda spelaren som också anger lagkamrater som pressfaktor.</div>
+        <div class="bars">
+          <div class="bar">
+            <span class="bar-label">Nej</span>
+            <span class="bar-meta"><span class="n">16</span> / 17 · 94%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:94%"></div></div>
+          </div>
+          <div class="bar warn">
+            <span class="bar-label">Någon gång</span>
+            <span class="bar-meta"><span class="n">1</span> / 17 · 6%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:6%"></div></div>
+          </div>
+        </div>
+        <div class="deviation-callout">
+          <span class="badge">Prioritet</span>
+          <p>En enskild signal är inte statistik — det är en spelare. Citatet är kort och otvetydigt; rekommendation är ett enskilt samtal och en plan för vem som hämtar henne i omklädningsrummet/uppvärmningen.</p>
+        </div>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text">Det känns ensamt.</p>
+          <div class="quote-attr">Spelare som känt sig utanför</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Pull-quote (mid) ============== -->
+<section class="pullquote">
+  <div class="pullquote-inner">
+    <div class="lbl">Citat ur enkäten</div>
+    <blockquote>Jag älskar att spela match för att vi får gemenskap genom att möta andra tuffa lag.</blockquote>
+    <div class="attr">Spelare på frågan om matchglädje</div>
+  </div>
+</section>
+
+<!-- ============== Q4 Träningar ============== -->
+<section class="report">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 04 / Träning</div>
+        <h2>Tycker du att träningarna är roliga?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">100<span class="unit">%</span></div>
+        <div class="verdict-label">tycker att träningarna är roliga <strong>alltid eller ofta</strong> — ingen svarar &quot;sällan&quot; eller &quot;aldrig&quot;.</div>
+        <div class="bars">
+          <div class="bar">
+            <span class="bar-label">Alltid</span>
+            <span class="bar-meta"><span class="n">9</span> / 14 · 64%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:64%"></div></div>
+          </div>
+          <div class="bar">
+            <span class="bar-label">Ofta</span>
+            <span class="bar-meta"><span class="n">5</span> / 14 · 36%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:36%"></div></div>
+          </div>
+        </div>
+        <p style="margin-top:24px;font-size:13px;color:var(--ink-soft)">3 spelare hoppade över frågan. Citat under &quot;mindre roligt&quot; pekar på passa-mot-vägg-övningar, lång väntan och få vattenpauser.</p>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Roligt: fys, spela, försvar, anfall, individuell teknik. Mindre roligt: passa mot en vägg.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px">Vad spelarna lyfter</div>
+          <div class="cloud">
+            <span class="chip lg">Tempo</span>
+            <span class="chip md">Beach</span>
+            <span class="chip md">Variation</span>
+            <span class="chip md">Anfall</span>
+            <span class="chip md">Målvakt</span>
+            <span class="chip warn">Mindre kul: väntan</span>
+            <span class="chip warn">Mindre kul: passa mot vägg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q5 Match ============== -->
+<section class="report alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 05 / Matchglädje</div>
+        <h2>Tycker du det är roligt att spela match?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">100<span class="unit">%</span></div>
+        <div class="verdict-label">svarar <strong>ja</strong>. Inga avvikelser. Citaten lyfter gemenskap, tävling, kompisar och &quot;att möta tuffa lag&quot;.</div>
+        <div style="margin-top:36px;border:2px solid var(--blue);padding:22px 24px;background:var(--blue);color:#fff">
+          <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--orange);margin-bottom:8px">Konsensus</div>
+          <div style="font-family:var(--font-display);font-size:42px;line-height:1">17 / 17 säger ja</div>
+          <p style="margin:10px 0 0;font-size:14px;color:rgba(255,255,255,0.85)">Detta är den enda frågan där alla svarande är fullständigt eniga.</p>
+        </div>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Det är kul att man träffar alla lagkompisar och att tävla.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Ibland när jag kommer dit är jag trött om det är tidigt — men sen blir det roligare när vi börjar.</p>
+          <div class="quote-attr">Spelare om tidiga matchstarter</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q6 Press ============== -->
+<section class="report">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">06</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 06 / Press</div>
+        <h2>Var kommer pressen ifrån?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">65<span class="unit">%</span></div>
+        <div class="verdict-label">som anger en pressfaktor pekar på <strong>sig själva</strong>. Tränare och föräldrar nämns inte alls.</div>
+        <div class="press-matrix">
+          <div class="press-row">
+            <span class="press-source">Från dig själv</span>
+            <div class="press-track"><div class="press-fill" style="--w:100%"></div></div>
+            <span class="press-count">11</span>
+          </div>
+          <div class="press-row warn">
+            <span class="press-source">Från lagkamrater</span>
+            <div class="press-track"><div class="press-fill" style="--w:9%"></div></div>
+            <span class="press-count">1</span>
+          </div>
+          <div class="press-row zero">
+            <span class="press-source">Från tränare</span>
+            <div class="press-track"><div class="press-fill"></div></div>
+            <span class="press-count">0</span>
+          </div>
+          <div class="press-row zero">
+            <span class="press-source">Från föräldrar</span>
+            <div class="press-track"><div class="press-fill"></div></div>
+            <span class="press-count">0</span>
+          </div>
+        </div>
+        <div class="deviation-callout">
+          <span class="badge">Att fånga upp</span>
+          <p>En spelare anger lagkamrater som pressfaktor — samma person som svarat &quot;någon gång&quot; på utanförskaps-frågan. Den röda tråden är värd att adressera samlat.</p>
+        </div>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Jag känner bara pytte lite press från mig själv.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Jag känner att jag vill leverera.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Jag känner inte press från någon.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q7 Misslyckanden ============== -->
+<section class="report alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">07</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 07 / Motgångar</div>
+        <h2>Hur hanterar du ett misslyckande på match?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">100<span class="unit">%</span></div>
+        <div class="verdict-label">återhämtar sig — antingen direkt eller efter en kort surrunda. Ingen svarar att de tappar matchen mentalt.</div>
+        <div class="split">
+          <div class="split-half">
+            <div class="split-pct">53<span class="small">%</span></div>
+            <div class="split-text"><strong>&quot;Det spelar ingen roll, jag klarar det nästa gång.&quot;</strong></div>
+            <div style="margin-top:10px;font-family:var(--font-mono);font-size:12px;color:var(--ink-soft)">9 av 17</div>
+          </div>
+          <div class="split-half">
+            <div class="split-pct">47<span class="small">%</span></div>
+            <div class="split-text"><strong>&quot;Lite jobbigt men släpper det fort.&quot;</strong></div>
+            <div style="margin-top:10px;font-family:var(--font-mono);font-size:12px;color:var(--ink-soft)">8 av 17</div>
+          </div>
+        </div>
+        <p style="margin-top:24px;font-size:13px;color:var(--ink-soft)">Fördelningen är hälften-hälften — båda är friska reaktioner. Citaten visar att spelarna har språk för att hantera motgång.</p>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Att jag sätter eller passar bättre nästa gång.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Det är inte så mycket när jag är inne på planen — men när jag står i mål och släpper in en boll så kan jag inte släppa det så snabbt.</p>
+          <div class="quote-attr">Spelare i målvaktsroll</div>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Nej, alla gör fel.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q8 Rättvist ============== -->
+<section class="report">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">08</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 08 / Rättvisa</div>
+        <h2>Behandlar tränarna alla rättvist?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">88<span class="unit">%</span></div>
+        <div class="verdict-label">svarar entydigt <strong>ja</strong>. Två svarar &quot;ibland&quot; — den lägsta enigheten i hela enkäten.</div>
+        <div class="bars">
+          <div class="bar">
+            <span class="bar-label">Ja</span>
+            <span class="bar-meta"><span class="n">15</span> / 17 · 88%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="bar warn">
+            <span class="bar-label">Ibland</span>
+            <span class="bar-meta"><span class="n">2</span> / 17 · 12%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+          </div>
+        </div>
+        <div class="deviation-callout">
+          <span class="badge">Avvikelse</span>
+          <p>Två spelare upplever inte rättvis behandling konsekvent. Inga fritextkommentarer förklarar varför — överväg en uppföljningsfråga eller ett gruppsamtal om vad &quot;rättvist&quot; konkret betyder för spelarna.</p>
+        </div>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">De ser till att alla blir lika tränade.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Tränarna bryr sig om alla, säger vad man ska tänka på, och säger vad man gör bra.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q9 Position ============== -->
+<section class="report alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">09</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 09 / Position</div>
+        <h2>Är du nöjd med din position?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">88<span class="unit">%</span></div>
+        <div class="verdict-label">är nöjda med sin position. Två är inte nöjda — fritextsvaren visar tydlig önskan om mer rotation.</div>
+        <div class="bars">
+          <div class="bar">
+            <span class="bar-label">Nöjd</span>
+            <span class="bar-meta"><span class="n">14</span> / 16 · 88%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="bar warn">
+            <span class="bar-label">Inte nöjd</span>
+            <span class="bar-meta"><span class="n">2</span> / 16 · 12%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+          </div>
+        </div>
+        <div class="deviation-callout">
+          <span class="badge">Avvikelse</span>
+          <p>De två som inte är nöjda nämner båda en specifik position som inte passar. Citaten lyfter att enkäten saknade ett &quot;ja men…&quot;-alternativ.</p>
+        </div>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Jag är nöjd, men det gick inte att skriva om man tog ja — och jag ville bara säga att jag inte gillar att spela på kanten så mycket.</p>
+          <div class="quote-attr">Spelare</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px">Önskade positioner</div>
+          <div class="cloud">
+            <span class="chip lg">Nia (alla tre)</span>
+            <span class="chip md">Linje</span>
+            <span class="chip md">Målvakt</span>
+            <span class="chip md">Försvar</span>
+            <span class="chip md">Mittnia</span>
+            <span class="chip">Rotera alla</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q10 Fortsätta ============== -->
+<section class="report">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">10</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 10 / Lojalitet</div>
+        <h2>Spelar du nästa säsong?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">100<span class="unit">%</span></div>
+        <div class="verdict-label">svarar <strong>&quot;Ja, jag kommer absolut fortsätta.&quot;</strong> — en samlad signal från hela truppen.</div>
+        <div style="margin-top:36px;display:grid;grid-template-columns:repeat(17,1fr);gap:6px">
+          <!-- 17 player dots, all blue (committed) -->
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+          <span style="height:36px;background:var(--blue)"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);letter-spacing:0.1em">
+          <span>SPELARE 01</span><span>17 / 17 STANNAR</span><span>SPELARE 17</span>
+        </div>
+        <p style="margin-top:24px;font-size:13px;color:var(--ink-soft)">Notera: en spelare anger att hon pausar handbollen tills slutet av maj på grund av en parallell engagemang i dans, och vill återvända v.22. Det är en planerad återgång — inte ett avhopp.</p>
+      </div>
+      <div class="aside-block">
+        <div class="factbox">
+          <div class="lbl">Retention</div>
+          <div class="stat">17 / 17</div>
+          <p class="copy">Den högsta möjliga lojalitetssignalen ett ungdomslag kan få. Att samtidigt 88% trivs &quot;mycket bra&quot; och 100% vill stanna är ett tydligt mandat åt ledarstaben.</p>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Att jag tycker ni är de bästa tränare jag haft.</p>
+          <div class="quote-attr">Spelare i fritextsvaret &quot;övrigt&quot;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Q11 Målvakt ============== -->
+<section class="report alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">11</div>
+      <div class="section-title">
+        <div class="kicker">Fråga 11 / Målvaktsteam</div>
+        <h2>Vill du vara med i målvaktsteamet?</h2>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="stat-block">
+        <div class="verdict">3<span class="unit">/17</span></div>
+        <div class="verdict-label">spelare vill vara med i målvaktsteamet — en mindre, men engagerad kärna att bygga målvaktsträningen runt.</div>
+        <div class="bars">
+          <div class="bar">
+            <span class="bar-label">Vill vara med</span>
+            <span class="bar-meta"><span class="n">3</span> / 17 · 18%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:18%"></div></div>
+          </div>
+          <div class="bar">
+            <span class="bar-label">Vill inte</span>
+            <span class="bar-meta"><span class="n">14</span> / 17 · 82%</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:82%;background:var(--blue-deep);opacity:0.4"></div></div>
+          </div>
+        </div>
+        <p style="margin-top:24px;font-size:13px;color:var(--ink-soft)">Tre intresserade är fullt tillräckligt för en specialiserad målvaktsgrupp. Notera att ytterligare spelare nämner målvakt som en av sina favoritmoment på träningarna — bredd för rotation finns även utanför &quot;teamet&quot;.</p>
+      </div>
+      <div class="aside-block">
+        <div class="quote">
+          <p class="quote-text serif">Roligt är målvaktsträning — tycker inget är mindre roligt.</p>
+          <div class="quote-attr">Spelare med målvaktsintresse</div>
+        </div>
+        <div class="quote">
+          <p class="quote-text serif">Använda benen i målet.</p>
+          <div class="quote-attr">Spelare på frågan om vad hon vill bli bättre på</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Strengths & growth ============== -->
+<section class="report">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">12</div>
+      <div class="section-title">
+        <div class="kicker">Fritextsvar / Spelarnas egenbild</div>
+        <h2>Vad är jag bra på — vad vill jag bli bättre på?</h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);margin-bottom:18px">Det här är jag bra på</div>
+        <div class="cloud">
+          <span class="chip lg">Peppa lagkamraterna</span>
+          <span class="chip lg">Snäll mot alla</span>
+          <span class="chip md">Bjuda in alla</span>
+          <span class="chip md">Försvar</span>
+          <span class="chip md">Skjuta hårt</span>
+          <span class="chip md">Spärra &amp; linje</span>
+          <span class="chip md">Glädje i laget</span>
+          <span class="chip md">Ta ansvar på plan</span>
+          <span class="chip md">Lyssna på andra</span>
+          <span class="chip md">Stegisättning</span>
+          <span class="chip md">Springa</span>
+          <span class="chip md">Raka passningar</span>
+          <span class="chip md">Tro på andra</span>
+          <span class="chip md">Skjuta mål</span>
+        </div>
+        <p style="margin-top:24px;font-size:14px;color:var(--ink-soft)">Märk hur många som svarar med <strong>relationsord</strong> innan de svarar med tekniska färdigheter. Det är lagets identitet — och bör hyllas, inte tas för given.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--orange);margin-bottom:18px">Det här vill jag bli bättre på</div>
+        <div class="cloud">
+          <span class="chip lg">Försvar</span>
+          <span class="chip lg">Anfall</span>
+          <span class="chip md">Genombrott</span>
+          <span class="chip md">Falleknik</span>
+          <span class="chip md">Kondition</span>
+          <span class="chip md">Skott från kant</span>
+          <span class="chip md">Stega förbi</span>
+          <span class="chip md">Passningar</span>
+          <span class="chip md">Finta</span>
+          <span class="chip md">Kullager</span>
+          <span class="chip md">Använda benen i mål</span>
+          <span class="chip md">9a-spel</span>
+          <span class="chip md">Övrig teknik</span>
+        </div>
+        <p style="margin-top:24px;font-size:14px;color:var(--ink-soft)">En tydlig majoritet vill träna <strong>försvar och nia-spel</strong>. Bra konkret input för säsongsplaneringen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Closing ============== -->
+<section class="closing">
+  <div class="wrap">
+    <h2>Tre saker att <em>göra</em> innan nästa säsong.</h2>
+    <div class="closing-points">
+      <div class="closing-point">
+        <div class="n">01</div>
+        <h3>Enskilt samtal med spelaren som känt sig ensam</h3>
+        <p>En spelare har konsekvent svarat avvikande på trivsel, utanförskap och press från lagkamrater. Detta är en samlad signal som förtjänar ett enskilt samtal — och en plan för vem som följer upp under hösten.</p>
+      </div>
+      <div class="closing-point">
+        <div class="n">02</div>
+        <h3>Konkretisera &quot;rättvist&quot; med truppen</h3>
+        <p>Två spelare svarar &quot;ibland&quot; på rättvisa-frågan utan att lämna fritextsvar. En kort gruppdiskussion om vad rättvis behandling konkret betyder kan både fånga upp dem och stärka tilliten i hela truppen.</p>
+      </div>
+      <div class="closing-point">
+        <div class="n">03</div>
+        <h3>Bygg in mer positions­rotation</h3>
+        <p>Två är inte nöjda med sin position och flera fritextsvar uttrycker önskan om att &quot;testa alla&quot; eller specifikt få spela nia. Lägg in tydliga rotationsblock i höstplanen — gärna kommunicerade i förväg.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap row">
+    <div class="crest" style="color:#fff"><span class="crest-mark"></span><span>Kävlinge HK · F14 · Pulscheck 2026</span></div>
+    <div>17 svar · 11 frågor · sammanställd internt</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -53,8 +53,10 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
   body {
+    overflow-x: clip;
+    overflow-wrap: break-word;
     margin: 0;
     font-family: var(--font-body);
     background: var(--paper);
@@ -911,7 +913,7 @@
         </div>
         <div class="deviation-callout">
           <span class="badge">Prioritet</span>
-          <p>En enskild signal är inte statistik — det är en spelare. Citatet är kort och otvetydigt; rekommendation är ett enskilt samtal och en plan för vem som hämtar henne i omklädningsrummet/uppvärmningen.</p>
+          <p>En enskild signal är inte statistik — det är en spelare. Citatet är kort och otvetydigt; rekommendation är ett enskilt samtal och en plan för vem som hämtar henne i omklädningsrummet / uppvärmningen.</p>
         </div>
       </div>
       <div class="aside-block">

@@ -20,7 +20,7 @@
 **Pressen kommer inifrån.** Ingen pekar på tränare eller föräldrar. Den press som finns lägger tjejerna på sig själva — de vill prestera och vara bra. Det är bra drivkraft, men värt att hålla ögonen på.
 
 **Tre saker att titta närmare på:**
-- **Luna** har ibland känt sig utanför — "det känns ensamt".
+- **L.** har ibland känt sig utanför — "det känns ensamt".
 - Tjejerna efterfrågar **mer tempo, mindre väntan** på träningarna.
 - Bara **tre** vill gå med i målvaktsteamet — kan behöva fler.
 
@@ -38,7 +38,7 @@ Skala: Mycket bra · Ganska bra · Inte så bra · Inte alls. **Snittstämning: 
 | Inte alls | 0 |
 
 > "Kompisar, utmaning, tränare och självaste sporten."
-> — Emma R., om varför hon trivs
+> — E., om varför hon trivs
 
 Noll spelare svarar "inte så bra" eller sämre.
 
@@ -53,10 +53,10 @@ Alla 16 svarande har minst några kompisar — de flesta har många. **100% har 
 | Inget svar | 1 |
 
 > "Jag har många kompisar i laget och har hittat min bästa kompis."
-> — Emma R.
+> — E.
 
 > "Jag har precis börjat så har inte jättemånga än."
-> — Emma, ny i laget
+> — E., ny i laget
 
 ### Q3 · Har du någon gång känt dig utanför?
 
@@ -70,7 +70,7 @@ Den enda riktiga avvikelsen i hela enkäten — värd att fånga upp. **1 av 16 
 ⚑ **Avvikelse**
 
 > "Det känns ensamt."
-> — Luna, som ibland känt sig utanför
+> — L., som ibland känt sig utanför
 
 En av femton är fortfarande en av femton. Värt ett enskilt samtal — och att lyfta in i tränarens "bjuda in alla"-tanke som flera andra spelare nämner som styrka.
 
@@ -88,28 +88,28 @@ Skala: Alltid · Ofta · Sällan · Aldrig. **Snittstämning: 4,6/5.**
 | Aldrig | 0 |
 
 > "Roligt: fys, spela, försvar, anfall, individuell teknik. Mindre roligt: passa mot en vägg."
-> — Linn
+> — L.
 
 > "Roligt när vi har tempoövningar. Mindre roligt när det är mycket väntan."
-> — Emma R.
+> — E.
 
-**Mönster:** Fyra av sex kommentarer pekar åt samma håll — **mer tempo, mer spel, mindre väntan**. Maja vill kortare pass av samma övning, Kajsa vill mer beach och kontringar.
+**Mönster:** Fyra av sex kommentarer pekar åt samma håll — **mer tempo, mer spel, mindre väntan**. M. vill kortare pass av samma övning, K. vill mer beach och kontringar.
 
 ### Q5 · Tycker du det är roligt att spela match?
 
 Inga tveksamheter här. **15/15 svarar ja.**
 
 > "Jag älskar att spela match för att vi får gemenskap genom att möta andra tuffa lag."
-> — Emma R.
+> — E.
 
 > "Det är kul att man träffar alla lagkompisar och att tävla."
-> — Kajsa
+> — K.
 
 > "Det är kul att göra mål men också göra så att andra gör mål."
-> — Linnea
+> — L.
 
 > "Att vi får möta andra lag och se hur bra de är."
-> — Vilma
+> — V.
 
 ## 03 · Press & misslyckande
 
@@ -125,10 +125,10 @@ Spelarna kunde markera flera källor. Resultatet är väldigt tydligt — **10 a
 | Från föräldrar | 0 |
 
 > "Jag känner att jag vill leverera."
-> — Linn
+> — L.
 
 > "Jag känner inte så mycket men när jag står i mål och släpper in mycket så blir jag ledsen och tycker inte jag är bra."
-> — Kajsa
+> — K.
 
 ### Q7 · Hur känns det när du misslyckas på match?
 
@@ -143,10 +143,10 @@ T.ex. en missad passning eller ett bommat skott. **100% hanterar det sunt.**
 **Styrka:** Ingen markerade "tar det hårt" eller "tänker på det länge". Lagets mentala verktygslåda fungerar — flera berättar att de tänker "så ska jag göra nästa gång" direkt efter ett misstag.
 
 > "För att man gör sit bästa och man kan inte göra mer."
-> — Tilda
+> — T.
 
 > "Att jag skulle gjort så när jag sköt — och då brukar det bli mål nästa gång."
-> — Vilma R.
+> — V.
 
 ## 04 · Tränare & rättvisa
 
@@ -161,13 +161,13 @@ Skala: Ja · Ibland · Nej. **Snittstämning: 4,8/5.**
 | Nej | 0 |
 
 > "Att jag tycker ni är de bästa tränare jag haft."
-> — Vilma R.
+> — V.
 
 > "De bryr sig om alla, säger vad man ska tänka på och vad man gör bra."
-> — Elsa
+> — E.
 
 > "Att de ser till att alla blir lika tränade."
-> — Vilma R.
+> — V.
 
 ## 05 · Framtid & roller
 
@@ -183,11 +183,11 @@ Skala: Ja (1) · Nej (0). Två lämnade frågan blank. **88% av de som svarat ä
 
 | Svar | Antal | Citat |
 |---|---|---|
-| Nöjda med sin position | 13 | "Faktiskt så är jag jättenöjd där jag spelar." — Elsa |
-| Vill spela något annat | 2 | "Jag vill helst spela på vänster eller höger nia." — Wilma |
+| Nöjda med sin position | 13 | "Faktiskt så är jag jättenöjd där jag spelar." — E. |
+| Vill spela något annat | 2 | "Jag vill helst spela på vänster eller höger nia." — W. |
 | Inget svar | 2 | Värt en koll: vad tänker de? |
 
-**Att fundera på:** Flera nämner specifika önskemål — Linn vill testa `mittnia`, Tilda vill stå mer i mål, Kajsa vill *inte* stå i mål, Leah vill testa allt. Ett kort positionssamtal per spelare i höst kan ge mycket.
+**Att fundera på:** Flera nämner specifika önskemål — L. vill testa `mittnia`, T. vill stå mer i mål, K. vill *inte* stå i mål, L. vill testa allt. Ett kort positionssamtal per spelare i höst kan ge mycket.
 
 ### Q11 · Vill du vara med i målvaktsteamet?
 
@@ -195,10 +195,10 @@ Inför nästa säsongs satsning på målvaktsträning. **3 av 16 svarar ja.**
 
 | Svar | Antal | Spelare |
 |---|---|---|
-| Ja | 3 | Mollie · Tilda · Lykke |
+| Ja | 3 | M. · T. · L. |
 | Tackar nej för tillfället | 13 | |
 
-**Reflektion:** Mollie skrev dessutom att målvaktsträning är det *roligaste* hon vet — bra signal inför satsningen. Värt att även fråga **Nejla** personligen, som nämner målvakt i sitt positionssvar utan att kryssa i rutan.
+**Reflektion:** M. skrev dessutom att målvaktsträning är det *roligaste* hon vet — bra signal inför satsningen. Värt att även fråga **N.** personligen, som nämner målvakt i sitt positionssvar utan att kryssa i rutan.
 
 ## 06 · Lagets egna ord
 
@@ -213,10 +213,10 @@ försvar · finter · kullager · passningar · stega förbi · teknik · skott 
 ## Sista ordet till spelarna
 
 > "Ni gör ett *bra jobb*."
-> — Mollie, på frågan "Har du något annat du vill dela med dig av till tränarna?"
+> — M., på frågan "Har du något annat du vill dela med dig av till tränarna?"
 
 ---
 
-**Metod.** Webbenkät skickad till hela truppen Kävlinge HK F14 i april–maj 2026. 17 av 18 spelare svarade fullständigt; 1 svar (Pauline) påbörjades men slutfördes inte och räknas inte med i procentsatserna. Kommentarer återges ordagrant — stavning och formuleringar är spelarnas egna.
+**Metod.** Webbenkät skickad till hela truppen Kävlinge HK F14 i april–maj 2026. 17 av 18 spelare svarade fullständigt; 1 svar (P.) påbörjades men slutfördes inte och räknas inte med i procentsatserna. Kommentarer återges ordagrant — stavning och formuleringar är spelarnas egna.
 
 Kävlinge HK · F14 · Säsongsrapport 2025/26 · Sammanställd maj 2026.
